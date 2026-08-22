@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.starting-btn {
+    width: 10rem;
+    height: 3rem;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+}

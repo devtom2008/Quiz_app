@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.score-comment-btn {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000FF;
+    color: aliceblue;
+    width: clamp(300px, 20vw, 350px);
+    height: clamp(300px, 20vh, 350px);
+    border-radius: 50%;
+
+}
+
+#max-score {
+    font-size: clamp(1.5rem, 2rem, 2.5rem);
+}
+
+#real-score {
+    font-size: clamp(1.5rem, 2rem, 2.5rem);
+}
+
+.for-rebegin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.return-btn {
+    width: clamp(20rem, 50vw, 25rem);
+    font-size: clamp(1rem, 1.5rem, 2rem);
+    height: 8vh;
+    border-radius: 5px;
+    border: none;
+    background-color: #0000FF;
+    color: aliceblue;
+}
