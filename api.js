@@ -1,23 +1,23 @@
 const url = "https://opentdb.com/api.php?amount=10&type=multiple"
 
+function decodeQuestionAnswer(text) {
+    const textarea = document.createElement("textarea");
+    textarea.innerHTML = text
+    return textarea.value;
+}
+
 export async function getQuestionsAnswers() {
     const response = await fetch(url);
 
-    console.log('status:', response.status);
-
-
     const data = await response.json();
-    console.log(data);
-    console.log(data.results);
-
 
     return arrangeQuestionsAnswer(data.results);
 
 }
 
+
 export function arrangeQuestionsAnswer(results) {
 
-    console.log(results)
     return results.map(element => {
 
         const answers = [
@@ -28,10 +28,12 @@ export function arrangeQuestionsAnswer(results) {
         answers.sort(() => Math.random() - 0.5)
 
         return {
-            question: element.question,
-            answers: answers,
-            correct_answer: element.correct_answer
-        }
+            question: decodeQuestionAnswer(element.question),
+            answers: answers.map(decodeQuestionAnswer),
+            correct_answer: decodeQuestionAnswer(element.correct_answer)
+        };
     })
+
+
 }
 

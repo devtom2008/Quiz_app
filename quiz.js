@@ -10,9 +10,9 @@ let questionAnswer = [],
 const quizDiv = document.getElementById('quiz-div'),
     questionQuizDiv = document.getElementById('question'),
     answerQuizDiv = document.getElementById('answer'),
-    nextBtnDiv = document.getElementById('next-btn-div'),
     coverAnswer = document.getElementById('cover-answer'),
-    nextbutton = document.getElementById('unusable-next-btn')
+    nextbutton = document.getElementById('unusable-next-btn'),
+    nextBtnDiv = document.getElementById('next-btn-div')
 
 function selectAnswer() {
     let selected_answer,
@@ -77,7 +77,6 @@ function displayQuestionAnswer() {
 
 
 
-
 nextbutton.addEventListener('click', () => {
     if (has_choiced === true) {
         if (currentIndex < questionAnswer.length - 1) {
@@ -95,10 +94,7 @@ async function startQuiz() {
 
     questionAnswer = await getQuestionsAnswers()
 
-    displayQuestionAnswer()
-
-    console.log(questionAnswer)
-
+    displayQuestionAnswer();
 }
 
 startQuiz()
